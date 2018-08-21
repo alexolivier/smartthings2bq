@@ -2,7 +2,7 @@
 
 
 [[projects]]
-  digest = "1:619f2e0cef6ce3ca7566bdb2e4bb2577ce027625eea578ab354e1ca88530f6c8"
+  digest = "1:0fae1a712fd67850d8cc934fbb80b8e90b244de3e87fbb07d5b4a9d4b6641fce"
   name = "cloud.google.com/go"
   packages = [
     "bigquery",
@@ -20,8 +20,8 @@
     "pubsub/internal/distribution",
   ]
   pruneopts = "UT"
-  revision = "0fd7230b2a7505833d5f69b75cbd6c9582401479"
-  version = "v0.23.0"
+  revision = "64a2037ec6be8a4b0c1d1f706ed35b428b989239"
+  version = "v0.26.0"
 
 [[projects]]
   digest = "1:dc27d9777febe9e63ab33a2cd15e31ce8d9463932d2472cc7097dc662dedb5ab"
