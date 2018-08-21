@@ -1,0 +1,34 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: smartthings2bq
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: smartthings2bq
+    spec:
+      volumes:
+        - name: keyfile
+          secret:
+            secretName: smartthings2bqkey
+      containers:
+      - name: smartthings2bq
+        image: gcr.io/alex-olivier/smartthings2bq:latest
+        imagePullPolicy: Always
+        volumeMounts:
+          - name: keyfile
+            mountPath: /config
+            readOnly: true
+        env:
+          - name: PROJECT
+            value: "alex-olivier"
+          - name: DATASET
+            value: "smarthome_prod"
+          - name: TABLE
+            value: "smartthings"
+          - name: SUBSCRIPTION
+            value: "smartthings2bq-prod"
+          - name: KEYFILE
+            value: /config/smartthings2bqkey
