@@ -19,7 +19,7 @@ var keyfilePtr string
 
 type recording struct {
 	ID        string `mapstructure:"id"`
-	Timestamp string `mapstructure:"date", bigquery:"timestamp"`
+	Timestamp string `mapstructure:"date" bigquery:"timestamp"`
 	Device    string `mapstructure:"device"`
 	Key       string `mapstructure:"key"`
 	Name      string `mapstructure:"name"`
